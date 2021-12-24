@@ -1,0 +1,154 @@
+<div class="container-fluid">
+    <div class="row d-flex justify-content-around">
+        <div class="col-md-4">
+            <h5>About the countries with the highest number of infected people</h5>
+            <table class="table" style="border: 2px black solid">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Confirmed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let Country of MostConfirm">
+                        <tr>
+                            <td>
+                                {{ Country.countryregion}}
+                                <ng-container *ngIf="Country.provincestate">
+                                    ({{Country["provincestate"]}})
+                                </ng-container>
+                            </td>
+                            <td>{{ Country.confirmed }}</td>
+
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h5>About the countries with the highest number of deaths people</h5>
+            <table class="table" style="border: 2px black solid">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Deaths</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let Country of MostDeaths">
+                        <tr>
+                            <td>
+                                {{ Country.countryregion}}
+                                <ng-container *ngIf="Country.provincestate">
+                                    ({{Country["provincestate"]}})
+                                </ng-container>
+                            </td>
+                            <td>{{ Country.deaths }}</td>
+
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h5>About the countries with the highest number of recovered people</h5>
+            <table class="table" style="border: 2px black solid">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Recovered</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let Country of MostRecovered">
+                        <tr>
+                            <td>
+                                {{ Country.countryregion}}
+                                <ng-container *ngIf="Country.provincestate">
+                                    ({{Country["provincestate"]}})
+                                </ng-container>
+                            </td>
+                            <td>{{ Country.recovered }}</td>
+
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h5>About the countries with the smallest number of infected people</h5>
+            <table class="table" style="border: 2px black solid">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Confirmed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let Country of AtLeastConfirm">
+                        <tr>
+                            <td>
+                                {{ Country.countryregion}}
+                                <ng-container *ngIf="Country.provincestate">
+                                    ({{Country["provincestate"]}})
+                                </ng-container>
+                            </td>
+                            <td>{{ Country.confirmed }}</td>
+
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h5>About the countries with the smallest number of deaths people</h5>
+            <table class="table" style="border: 2px black solid">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Deaths</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let Country of AtLeastDeaths">
+                        <tr>
+                            <td>
+                                {{ Country.countryregion}}
+                                <ng-container *ngIf="Country.provincestate">
+                                    ({{Country["provincestate"]}})
+                                </ng-container>
+                            </td>
+                            <td>{{ Country.deaths }}</td>
+
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h5>About the countries with the smallest number of recovered people</h5>
+            <table class="table" style="border: 2px black solid">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Recovered</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let Country of AtLeastRecovered">
+                        <tr>
+                            <td>
+                                {{ Country.countryregion}}
+                                <ng-container *ngIf="Country.provincestate">
+                                    ({{Country["provincestate"]}})
+                                </ng-container>
+                            </td>
+                            <td>{{ Country.recovered }}</td>
+
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

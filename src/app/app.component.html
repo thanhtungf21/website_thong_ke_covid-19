@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div>
+    <app-world-wide (changed)="changeMessage($event)"></app-world-wide>
+  </div>
+  <div class="row">
+    <app-map class="col-8" [Report]="CountryReport"></app-map>
+    <app-chart-report
+      [Report]="CountryReport"
+      class="col-4 mt-4"
+    ></app-chart-report>
+  </div>
+  <div>
+    <app-table-top></app-table-top>
+  </div>
+</div>

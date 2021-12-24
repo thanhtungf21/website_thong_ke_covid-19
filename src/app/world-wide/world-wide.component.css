@@ -1,0 +1,27 @@
+#item1{
+    background-color: rgb(103, 58, 183);
+}
+#item2{
+    background-color: rgb(0, 150, 136);
+}
+#item3{
+    background-color: rgb(233, 30, 99);
+}
+#item4{
+    background-color:rgb(194, 24, 91);
+}
+.item{
+    color: white;
+    border-radius: 8px;
+    padding: 15px 10px 0px 25px;
+    font-size: 18px;
+}
+
+#selectbox {
+    margin-bottom: 1em;
+    padding: .25em;
+    border: 0;
+    border-bottom: 2px solid currentcolor; 
+    font-weight: bold;
+    border-radius: 0;
+}
