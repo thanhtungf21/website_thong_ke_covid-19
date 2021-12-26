@@ -14,17 +14,28 @@ export class ChartReportComponent{
   FidenceInterval=[];
   CountryCampuchia;
   statisticCal=[];
-  view: any[] = [500, 300]; 
+  view: any[]; 
   colorScheme = {
     domain: ['rgb(103, 58, 183)', 'rgb(0, 150, 136)', 'rgb(233, 30, 99)']
   };
+  classFlag = false;
+    
   constructor(private service: GetApiService) {
   }
-
+  ngOnInit(){
+    
+  }
   ngOnChanges() {
     console.log(this.Report);
     this.getAllTimeseries();
     this.getSelectCountryReports();
+    if (screen.width <= 768) {
+      this.classFlag = true;
+      this.view = [screen.width - 50, 300]
+    } else {
+      this.classFlag = false;
+      this.view = [500, 300]
+    }
   }
   public getAllTimeseries() {
     this.service.timeseriesReports().subscribe((report) => {

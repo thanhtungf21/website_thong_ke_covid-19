@@ -1,0 +1,13 @@
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin-left: 20px;
+}
+
+.active-link {
+  background-color: blue;
+  color: white;
+}

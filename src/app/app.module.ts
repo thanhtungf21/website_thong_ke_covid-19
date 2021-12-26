@@ -10,6 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { TableTopComponent } from './table-top/table-top.component';
 import { MapComponent } from './map/map.component';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +21,7 @@ import { MapComponent } from './map/map.component';
     ChartReportComponent,
     TableTopComponent,
     MapComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,9 @@ import { MapComponent } from './map/map.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     NgxChartsModule,
-    LeafletModule
+    LeafletModule,
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

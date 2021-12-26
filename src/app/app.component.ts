@@ -9,21 +9,21 @@ import { GetApiService } from './services/get-api.service';
 })
 export class AppComponent implements OnInit {
   title = 'MockProject';
-  CountryReport;
+  // CountryReport;
 
   constructor(private service: GetApiService) { }
 
   ngOnInit(): void {
-    this.getDefaultVietNam();
+    // this.getDefaultVietNam();
   }
 
-  public getDefaultVietNam() {
-    this.service.getAllCountry().subscribe((report) => {
-      this.CountryReport = report.reduce((a, b) => b.countryregion == 'Vietnam' ? b : a, 0);
-    });
-  }
+  // public getDefaultVietNam() {
+  //   this.service.getAllCountry().subscribe((report) => {
+  //     this.CountryReport = report.reduce((a, b) => b.countryregion == 'Vietnam' ? b : a, 0);
+  //   });
+  // }
   
-  changeMessage($event) {
-    this.CountryReport = $event;
-  }
+  // changeMessage($event) {
+  //   this.CountryReport = $event;
+  // }
 }
